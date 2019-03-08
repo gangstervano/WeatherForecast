@@ -18,9 +18,10 @@ namespace WeatherForecast
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter outputFile = new StreamWriter("GisMeteo.txt");
-            string HtmlText = Internet.GetHtmlPage("https://www.gismeteo.ru/city/daily/4327/");
+            StreamWriter outputFile = new StreamWriter("GisMeteo.html");
+            string HtmlText = Internet.GetHtmlData2("https://www.gismeteo.ru/city/daily/4327/");
             outputFile.WriteLine(HtmlText);
+            outputFile.Close();
         }
     }
 }
