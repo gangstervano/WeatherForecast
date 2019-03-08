@@ -1,2 +1,3 @@
 WeatherForecast/obj/
-
+.vs
+*.pdb
